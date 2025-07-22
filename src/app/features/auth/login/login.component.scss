@@ -1,0 +1,137 @@
+/* Base styles (already mobile-first) */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.login-container {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #1e1e2f, #2c2c3c);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* reduce padding for small screens */
+  box-sizing: border-box;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 360px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  color: white;
+  transition: background 0.3s ease;
+}
+
+/* Gradient based on userType */
+.login-card.employee {
+  background: linear-gradient(to right, #36d1dc, #5b86e5);
+}
+
+.login-card.admin {
+  background: linear-gradient(to right, #ff512f, #dd2476);
+}
+
+/* Form styling */
+.form-group {
+  margin-bottom: 20px;
+}
+
+input[type='email'],
+input[type='password'] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.login-options {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+.create-account {
+  display: block;
+  margin-top: 25px;
+  text-align: center;
+  color: #fff;
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 40px 20px;
+  }
+
+  .login-card {
+    padding: 25px 20px;
+  }
+
+  .login-options {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Phones (480px and below) */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 20px 10px;
+  }
+
+  .login-card {
+    padding: 20px 15px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  input[type='email'],
+  input[type='password'] {
+    padding: 8px;
+  }
+
+  button {
+    padding: 10px;
+  }
+
+  .login-options {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .create-account {
+    font-size: 0.85rem;
+  }
+}
