@@ -10,5 +10,6 @@ import { RouterLink } from '@angular/router';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
+  test:string="test"
 userType: 'employee' | 'admin' = 'admin'; // default
 }
